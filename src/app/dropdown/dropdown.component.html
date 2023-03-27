@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Custom dropdown</h2>
+
+  <div class="dropdown-container" (click)="selector.focus(); openDropDown()">
+    <input [value]="_selectedOption?.itemName" #selector (focusout)="closeDropDown()" readonly [placeholder]="placeholder" type="text" >
+    <span class="suffix"></span>
+  </div>
+
+
+  <div *ngIf="dropdownOpened && items" class="dropdown-items">
+    <div
+      *ngFor="let item of items; trackBy: trackByFn"
+      (mousedown)="selectItem(item)"
+      [class.selected]="_selectedOption?.id === item.id"
+    >{{item.itemName}}</div>
+  </div>
+</div>

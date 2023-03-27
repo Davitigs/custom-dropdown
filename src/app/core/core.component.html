@@ -1,0 +1,6 @@
+<app-dropdown
+  [items]="items$ | async"
+  [selectedOption]="selectedOption"
+  [placeholder]="'Select an option'"
+  (setSelectedOption)="setSelectedOption($event)"
+></app-dropdown>
