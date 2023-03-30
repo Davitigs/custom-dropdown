@@ -1,12 +1,12 @@
 .container {
-  width: 300px;
+  width: 400px;
   max-width: 50%;
   padding: 20px 50px 20px 20px;
   border-radius: 6px;
   background: #f7f9fb;
   .dropdown-container {
-    border: 1px solid #e8e9eb;
-    border-radius: 10px;
+    border: 1px solid #e9ebec;
+    border-radius: 6px;
     background: white;
     padding: 8px;
     display: flex;
@@ -14,13 +14,19 @@
     align-items: center;
 
     &.active {
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5)
     }
 
     input {
       border: none;
       outline: none;
       background: transparent;
+      color: #58595e;
+      font-size: 12px;
+
+      &::placeholder {
+        color: #cdd3d6;
+      }
 
       &:focus {
         & ~ .suffix {
@@ -38,7 +44,6 @@
       display: flex;
       align-items: center;
       margin-right: 11px;
-      margin-bottom: 2px;
       transition: all .2s;
 
       &:after {
@@ -55,14 +60,15 @@
 
   .dropdown-items {
     margin-top: 10px;
-    //border: 1px solid grey;
+    font-size: 12px;
     background: white;
     border-radius: 6px;
-    max-height: calc(7 * 30px);
+    max-height: calc(7 * 36px);
     overflow-y: auto;
     box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     div {
-      height: 30px;
+      height: 36px;
+      color: #58595e;
       display: flex;
       align-items: center;
       padding: 0 4px;
