@@ -1,7 +1,7 @@
 <div class="container">
-  <h2>Custom dropdown</h2>
-
-  <div class="dropdown-container" (click)="selector.focus(); openDropDown()">
+  <div class="dropdown-container"
+       [class.active]="dropdownOpened"
+       (click)="selector.focus(); openDropDown()">
     <input [value]="_selectedOption?.itemName" #selector (focusout)="closeDropDown()" readonly [placeholder]="placeholder" type="text" >
     <span class="suffix"></span>
   </div>
